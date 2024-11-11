@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nathanbirch/temple-api.git"
+    "url": "git+https://github.com/LisaMandarin/CSE341W02.git"
   },
   "author": "Nathan Birch",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nathanbirch/temple-api/issues"
   },
-  "homepage": "https://github.com/nathanbirch/temple-api#readme",
+  "homepage": "https://github.com/LisaMandarin/CSE341W02#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
