@@ -33,6 +33,7 @@ exports.create = (req, res) => {
 };
 
 exports.findAll = (req, res) => {
+  // #swagger.description = 'API Key if needed: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N'
   console.log(req.header('apiKey'));
   if (req.header('apiKey') === apiKey) {
     Temple.find(
@@ -62,6 +63,7 @@ exports.findAll = (req, res) => {
 
 // Find a single Temple with an id
 exports.findOne = (req, res) => {
+  // ##swagger.description = 'API Key if needed: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N'
   const temple_id = req.params.temple_id;
   if (req.header('apiKey') === apiKey) {
     Temple.find({ temple_id: temple_id })
