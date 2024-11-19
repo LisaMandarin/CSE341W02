@@ -1,2 +1,16 @@
-# DELETE  http://localhost:8080/temples/555
+###
+ DELETE  http://localhost:8080/temples/555
 
+###
+POST http://localhost:8080/temple
+Content-Type: application/json
+
+{
+    "temple_id" : 999,
+    "name" : "any",
+    "location" : "any",
+    "dedicated" : "any"
+}
+
+###
+GET http://localhost:8080/temple/999
