@@ -1,5 +1,6 @@
 const db = require("../models");
 const Temple = db.temples;
+const mongoose = require("mongoose")
 
 const apiKey =
   "Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N";
@@ -91,6 +92,9 @@ exports.findOne = async (req, res, next) => {
 exports.update = async (req, res, next) => {
   try {
     const id = req.params.id;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({message: "Invalid ID format"})
+    }
 
     const result = await Temple.findByIdAndUpdate(id, req.body, { new: true })
 
